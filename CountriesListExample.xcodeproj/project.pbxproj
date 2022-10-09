@@ -11,6 +11,7 @@
 		B7ADB8AD28F3543500A4EA3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ADB8AC28F3543500A4EA3B /* ContentView.swift */; };
 		B7ADB8AF28F3543600A4EA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7ADB8AE28F3543600A4EA3B /* Assets.xcassets */; };
 		B7ADB8B228F3543600A4EA3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7ADB8B128F3543600A4EA3B /* Preview Assets.xcassets */; };
+		B7ADB8BC28F38B2D00A4EA3B /* CountriesListLib in Frameworks */ = {isa = PBXBuildFile; productRef = B7ADB8BB28F38B2D00A4EA3B /* CountriesListLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B7ADB8AC28F3543500A4EA3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7ADB8AE28F3543600A4EA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7ADB8B128F3543600A4EA3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B7ADB8B928F3808600A4EA3B /* CountriesListLib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesListLib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7ADB8BC28F38B2D00A4EA3B /* CountriesListLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +38,10 @@
 		B7ADB89E28F3543500A4EA3B = {
 			isa = PBXGroup;
 			children = (
+				B7ADB8B828F3808600A4EA3B /* Packages */,
 				B7ADB8A928F3543500A4EA3B /* CountriesListExample */,
 				B7ADB8A828F3543500A4EA3B /* Products */,
+				B7ADB8BA28F38B2D00A4EA3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B7ADB8B828F3808600A4EA3B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B7ADB8B928F3808600A4EA3B /* CountriesListLib */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B7ADB8BA28F38B2D00A4EA3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = CountriesListExample;
+			packageProductDependencies = (
+				B7ADB8BB28F38B2D00A4EA3B /* CountriesListLib */,
+			);
 			productName = CountriesListExample;
 			productReference = B7ADB8A728F3543500A4EA3B /* CountriesListExample.app */;
 			productType = "com.apple.product-type.application";
@@ -339,6 +362,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7ADB8BB28F38B2D00A4EA3B /* CountriesListLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CountriesListLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7ADB89F28F3543500A4EA3B /* Project object */;
 }

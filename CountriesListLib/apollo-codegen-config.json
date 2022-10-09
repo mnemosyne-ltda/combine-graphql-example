@@ -1,0 +1,28 @@
+{
+  "schemaName" : "SchemaLib",
+  "input" : {
+    "operationSearchPaths" : [
+      "Sources/**/*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "Sources/**/*.graphqls"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./SchemaLib",
+      "moduleType" : {
+        "swiftPackageManager" : {
+        }
+      }
+    },
+    "operations" : {
+      "relative" : {
+      }
+    }
+  }
+}

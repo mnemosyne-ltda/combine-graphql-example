@@ -1,0 +1,22 @@
+query GetAllLanguages {
+    languages {
+        name
+        native
+    }
+}
+
+query GetAllContinents {
+    continents {
+        name
+    }
+}
+
+query GetAllCountries {
+    countries {
+        name
+        native
+        emoji
+        emojiU
+        capital
+    }
+}
