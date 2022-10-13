@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73ECBB028F8584800F6E99D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73ECBAF28F8584800F6E99D /* ContentViewModel.swift */; };
 		B7ADB8AB28F3543500A4EA3B /* CountriesListExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ADB8AA28F3543500A4EA3B /* CountriesListExampleApp.swift */; };
 		B7ADB8AD28F3543500A4EA3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ADB8AC28F3543500A4EA3B /* ContentView.swift */; };
 		B7ADB8AF28F3543600A4EA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7ADB8AE28F3543600A4EA3B /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B73ECBAF28F8584800F6E99D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B7ADB8A728F3543500A4EA3B /* CountriesListExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesListExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7ADB8AA28F3543500A4EA3B /* CountriesListExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListExampleApp.swift; sourceTree = "<group>"; };
 		B7ADB8AC28F3543500A4EA3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				B7ADB8AA28F3543500A4EA3B /* CountriesListExampleApp.swift */,
 				B7ADB8AC28F3543500A4EA3B /* ContentView.swift */,
+				B73ECBAF28F8584800F6E99D /* ContentViewModel.swift */,
 				B7ADB8AE28F3543600A4EA3B /* Assets.xcassets */,
 				B7ADB8B028F3543600A4EA3B /* Preview Content */,
 			);
@@ -162,6 +165,7 @@
 			files = (
 				B7ADB8AD28F3543500A4EA3B /* ContentView.swift in Sources */,
 				B7ADB8AB28F3543500A4EA3B /* CountriesListExampleApp.swift in Sources */,
+				B73ECBB028F8584800F6E99D /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

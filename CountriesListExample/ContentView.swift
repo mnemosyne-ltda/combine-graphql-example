@@ -6,28 +6,40 @@
 //
 
 import SwiftUI
-import CountriesListLib
 
 struct ContentView: View {
-    let lib = CountriesListLib()
-    @State var continents = [String]()
+    @StateObject var viewModel = ViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            Text("libText: \(lib.text)")
+        VStack(alignment: .leading) {
+            Button("Run") { viewModel.updateContinents() }
+                .padding(.bottom)
+
+            getHeader(text1: "Continents", text2: "\(viewModel.continents.count)")
             Divider()
-            ForEach(continents, id: \.self) { c in
+
+            ForEach(viewModel.continents, id: \.self) { c in
                 Text(c)
             }
+
+            getHeader(text1: "Erros", text2: "\(viewModel.errors.count)")
+                .padding(.top, 20)
+            Divider()
+
+            ForEach(viewModel.errors, id: \.self) { e in
+                Text(e)
+            }
+
+            Spacer()
         }
         .padding()
-        .onAppear {
-            lib.fetchContinents { continents in
-                self.continents = continents
-            }
+    }
+
+    @ViewBuilder func getHeader(text1: String, text2: String) -> some View {
+        HStack {
+            Text(text1).bold()
+            Spacer()
+            Text(text2).bold()
         }
     }
 }
