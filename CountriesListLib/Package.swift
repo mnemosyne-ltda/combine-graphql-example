@@ -7,7 +7,7 @@ let package = Package(
     name: "CountriesListLib",
     platforms: [
         .iOS(.v15),
-        .macOS(.v10_14),
+        .macOS(.v10_15),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -18,6 +18,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/apollographql/apollo-ios", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/hmlongco/Factory", .upToNextMajor(from: "1.2.8")),
         .package(name: "SchemaLib", path: "./SchemaLib"),
     ],
     targets: [
@@ -27,6 +28,7 @@ let package = Package(
             name: "CountriesListLib",
             dependencies: [
                 .product(name: "Apollo", package: "apollo-ios"),
+                .product(name: "Factory", package: "Factory"),
                 .product(name: "SchemaLib", package: "SchemaLib"),
             ]
         ),
