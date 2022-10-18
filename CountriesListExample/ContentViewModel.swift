@@ -1,4 +1,5 @@
 import Combine
+import Factory
 import Foundation
 import CountriesListLib
 
@@ -7,7 +8,8 @@ extension ContentView {
         @Published var continents = [String]()
         @Published var errors = [String]()
 
-        private let repository: ServerRepositoryProtocol = GraphQLRepository()
+        @Injected(Container.serverRepository)
+        private var repository: ServerRepositoryProtocol
 
         var repositoryFetchPublisher = PassthroughSubject<Void, Never>()
         var continentsSubscriber: AnyCancellable?
