@@ -12,6 +12,7 @@ let package = Package(
   ],
   products: [
     .library(name: "SchemaLib", targets: ["SchemaLib"]),
+    .library(name: "SchemaLibTestMocks", targets: ["SchemaLibTestMocks"])
   ],
   dependencies: [
     .package(url: "https://github.com/apollographql/apollo-ios.git", from: "1.0.0"),
@@ -23,6 +24,14 @@ let package = Package(
         .product(name: "ApolloAPI", package: "apollo-ios"),
       ],
       path: "./Sources"
+    ),
+    .target(
+      name: "SchemaLibTestMocks",
+      dependencies: [
+        .product(name: "ApolloTestSupport", package: "apollo-ios"),
+        .target(name: "SchemaLib"),
+      ],
+      path: "./TestMocks"
     ),
   ]
 )

@@ -34,6 +34,10 @@ let package = Package(
         ),
         .testTarget(
             name: "CountriesListLibTests",
-            dependencies: ["CountriesListLib"]),
+            dependencies: [
+                .product(name: "ApolloTestSupport", package: "apollo-ios"),
+                .product(name: "SchemaLibTestMocks", package: "SchemaLib"),
+                "CountriesListLib",
+            ]),
     ]
 )
