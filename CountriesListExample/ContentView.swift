@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Factory
+import CountriesListLib
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
@@ -45,7 +47,13 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static var mockRepository = MockedRepository(
+        resultCase: .error(.unknown)
+        // resultCase: .success(["Continent 1", "Continent 2"])
+    )
+
     static var previews: some View {
+        let _ = Container.serverRepository.register { mockRepository }
         ContentView()
     }
 }
